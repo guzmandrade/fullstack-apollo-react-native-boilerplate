@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Button,
   Image,
@@ -10,28 +10,29 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-} from 'react-native';
+} from "react-native";
 
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    // header: null,
+    headerShown: false,
   };
 
   render() {
     return (
-      <View style={{flex: 1}}>
-        <View style={{flex: 1}}></View>
-        <Text style={{textAlign: 'center', fontSize: 24}}>Landing</Text>
-        <View style={{flex: 1}}></View>
+      <View style={{ flex: 1 }}>
+        <View style={{ flex: 1 }}></View>
+        <Text style={{ textAlign: "center", fontSize: 24 }}>Landing</Text>
+        <View style={{ flex: 1 }}></View>
         <Button
           title="Login"
-          onPress={() => this.props.navigation.navigate('Login')}
+          onPress={() => this.props.navigation.navigate("Login")}
         />
         <Button
           title="Signup"
-          onPress={() => this.props.navigation.navigate('Signup')}
+          onPress={() => this.props.navigation.navigate("Signup")}
         />
-        <View style={{flex: 1}}></View>
+        <View style={{ flex: 1 }}></View>
       </View>
     );
   }

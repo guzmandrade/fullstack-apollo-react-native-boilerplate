@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   AsyncStorage,
   Button,
@@ -11,29 +11,28 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-} from 'react-native';
-
+} from "react-native";
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    // header: null,
+    headerShown: false,
   };
 
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={{flex: 1}}></View>
+        <View style={{ flex: 1 }}></View>
         <Text>Main app view</Text>
         <Button
           title="Logout"
           onPress={() => {
-            AsyncStorage.removeItem('userToken')
-              .then(() => {
-                this.props.navigation.navigate('Auth')
-              });
+            AsyncStorage.removeItem("userToken").then(() => {
+              this.props.navigation.navigate("Auth");
+            });
           }}
         />
-        <View style={{flex: 1}}></View>
+        <View style={{ flex: 1 }}></View>
       </SafeAreaView>
     );
   }
